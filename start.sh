@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rclone config file
+curl -s ipinfo.io
