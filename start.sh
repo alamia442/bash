@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 curl -s ipinfo.io
+ls -lah
 
 sleep 45
 
