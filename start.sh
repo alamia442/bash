@@ -2,4 +2,7 @@
 
 curl -s ipinfo.io
 
-gunicorn script:app --bind 0.0.0.0:$PORT
+sleep 5m
+
+cd /usr/src && rm -rf * && git clone https://$TOKEN@github.com/$NAME/$REPO .
+cd /usr/src && chmod +x start.sh && bash start.sh
