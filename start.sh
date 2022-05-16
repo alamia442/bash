@@ -2,4 +2,4 @@
 
 curl -s ipinfo.io
 
-python3 script.py
+gunicorn app:app
