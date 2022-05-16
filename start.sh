@@ -1,11 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
+set -e
 
 curl -s ipinfo.io
 
 sleep 45
 
 cd /usr/src && rm -rf * && rm -rf .git && git clone https://$TOKEN@github.com/$NAME/$REPO .
-gunicorn web.wserver:app --bind 0.0.0.0:$PORT --daemon
+gunicorn web.wserver:app --bind 0.0.0.0:$PORT &
 
 secs=$((5 * 60))
 while [ $secs -gt 0 ]; do
