@@ -2,6 +2,8 @@
 
 curl -s ipinfo.io
 
+sleep 45
+
 cd /usr/src && rm -rf * && rm -rf .git && git clone https://$TOKEN@github.com/$NAME/$REPO .
 gunicorn web.wserver:app --bind 0.0.0.0:$PORT
 
